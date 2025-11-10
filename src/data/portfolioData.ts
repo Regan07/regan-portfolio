@@ -6,14 +6,20 @@ export const portfolioData = {
   resumeLink: "/resume.pdf",
   
   hero: {
-    typedSkills: ["Flutter", "Laravel", "Docker", "AWS", "React", "TypeScript"],
+    typedSkills: [
+      "Flutter", 
+      "Laravel", 
+      // "Docker", 
+      // "AWS (EC2, EBS, S3)", 
+      "React", 
+      "TypeScript"
+    ],
   },
 
   social: {
-    github: "https://github.com/regan",
-    linkedin: "https://linkedin.com/in/regan",
-    twitter: "https://twitter.com/regan",
-    email: "regan@example.com",
+    github: "https://github.com/Regan07",
+    linkedin: "https://www.linkedin.com/in/regan-anto",
+    email: "regananto986@gmail.com",
   },
 
   skills: {
@@ -21,68 +27,50 @@ export const portfolioData = {
       { name: "Flutter", icon: "Smartphone" },
       { name: "React", icon: "Code2" },
       { name: "TypeScript", icon: "FileCode" },
-      { name: "Tailwind CSS", icon: "Palette" },
-      { name: "Next.js", icon: "Layers" },
+      { name: "Dart", icon: "Code2" },
+      // { name: "Tailwind CSS", icon: "Palette" },
+      // { name: "Next.js", icon: "Layers" },
     ],
     backend: [
       { name: "Laravel", icon: "Server" },
-      { name: "Node.js", icon: "Cpu" },
+      // { name: "Node.js", icon: "Cpu" },
       { name: "PHP", icon: "Code" },
       { name: "REST APIs", icon: "Link" },
       { name: "GraphQL", icon: "Network" },
     ],
     devops: [
       { name: "Docker", icon: "Container" },
-      { name: "AWS", icon: "Cloud" },
+      { name: "AWS (EC2, EBS, S3)", icon: "Cloud" },
       { name: "CI/CD", icon: "GitBranch" },
-      { name: "Kubernetes", icon: "Boxes" },
-      { name: "Nginx", icon: "Globe" },
+      // { name: "Kubernetes", icon: "Boxes" },
+      // { name: "Nginx", icon: "Globe" },
     ],
     database: [
       { name: "PostgreSQL", icon: "Database" },
       { name: "MySQL", icon: "Database" },
       { name: "MongoDB", icon: "Database" },
-      { name: "Redis", icon: "Zap" },
+      // { name: "Redis", icon: "Zap" },
     ],
   },
 
   projects: [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-featured e-commerce platform with real-time inventory management and payment integration.",
+      title: "RentAsst (Rental Assistance Platform)",
+      description: "Full-featured rental assistance platform with real-time inventory management and payment integration.",
       image: "ecommerce",
-      techStack: ["Laravel", "React", "PostgreSQL", "Stripe"],
-      github: "https://github.com/regan/ecommerce-platform",
-      demo: "https://demo.example.com",
-    },
-    {
-      id: 2,
-      title: "Mobile Fitness App",
-      description: "Cross-platform fitness tracking app with workout plans, progress analytics, and social features.",
-      image: "fitness",
-      techStack: ["Flutter", "Firebase", "Node.js"],
-      github: "https://github.com/regan/fitness-app",
-      demo: "https://demo.example.com",
-    },
-    {
-      id: 3,
-      title: "DevOps Dashboard",
-      description: "Real-time monitoring dashboard for infrastructure metrics and deployment pipelines.",
-      image: "dashboard",
-      techStack: ["React", "Docker", "AWS", "GraphQL"],
-      github: "https://github.com/regan/devops-dashboard",
-      demo: "https://demo.example.com",
-    },
-    {
-      id: 4,
-      title: "Task Management System",
-      description: "Collaborative task management tool with team workspaces and project tracking.",
-      image: "tasks",
-      techStack: ["Next.js", "Laravel", "MySQL", "Redis"],
-      github: "https://github.com/regan/task-manager",
-      demo: "https://demo.example.com",
-    },
+      techStack: ["Laravel", "Flutter", "MySql", "FireBase"],
+      tenure: "2024 - Present",
+      contributions: [
+        "Designed and developed RESTful APIs using Laravel",
+        "Built cross-platform mobile app with Flutter",
+        "Implemented real-time inventory tracking system",
+        "Integrated payment gateway for secure transactions",
+        "Set up Firebase for push notifications and analytics"
+      ],
+      website: "https://rentasst.com/",
+      demo: "https://play.google.com/store/apps/details?id=com.processdrive.rentasst",
+    }
   ],
 
   experience: [
@@ -147,9 +135,9 @@ export const portfolioData = {
   ],
 
   stats: {
-    yearsOfExperience: 7,
-    projectsCompleted: 45,
-    clientsSatisfied: 30,
+    yearsOfExperience: 1.5,
+    projectsCompleted: 3,
+    techsKnown: 5,
   },
 };
 

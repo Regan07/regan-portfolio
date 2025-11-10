@@ -1,6 +1,6 @@
 import { portfolioData } from "@/data/portfolioData";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Users, Briefcase } from "lucide-react";
+import { TrendingUp, Users, Briefcase, PenToolIcon, CodeIcon } from "lucide-react";
 
 export const About = () => {
   return (
@@ -28,9 +28,9 @@ export const About = () => {
                 <div className="text-sm text-muted-foreground">Projects</div>
               </Card>
               <Card className="p-4 text-center card-hover">
-                <Users className="h-8 w-8 text-primary mx-auto mb-2" />
-                <div className="text-2xl font-bold">{portfolioData.stats.clientsSatisfied}+</div>
-                <div className="text-sm text-muted-foreground">Clients</div>
+                <CodeIcon className="h-8 w-8 text-primary mx-auto mb-2" />
+                <div className="text-2xl font-bold">{portfolioData.stats.techsKnown}+</div>
+                <div className="text-sm text-muted-foreground">Techs Known</div>
               </Card>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { portfolioData } from "@/data/portfolioData";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, GlobeIcon } from "lucide-react";
 
 export const Projects = () => {
   return (
@@ -31,7 +31,15 @@ export const Projects = () => {
               </div>
               
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold">{project.title}</h3>
+                <div>
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  {project.tenure && (
+                    <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                      <span className="inline-block w-1 h-1 bg-primary rounded-full"></span>
+                      {project.tenure}
+                    </p>
+                  )}
+                </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {project.description}
                 </p>
@@ -44,17 +52,34 @@ export const Projects = () => {
                   ))}
                 </div>
 
+                {project.contributions && (
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-foreground">My Contributions:</h4>
+                    <ul className="space-y-1">
+                      {project.contributions.map((contribution, idx) => (
+                        <li key={idx} className="text-xs text-muted-foreground flex items-start">
+                          <span className="mr-2 text-primary">•</span>
+                          <span>{contribution}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="flex gap-3 pt-2">
-                  <Button asChild variant="outline" size="sm" className="gap-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
+                  {project.website && (
+                    <Button asChild variant="outline" size="sm" className="gap-2">
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                      <GlobeIcon className="h-4 w-4" />
+                        Website
+                      </a>
+                    </Button>
+                  )}
+
                   <Button asChild size="sm" className="gap-2">
                     <a
                       href={project.demo}
