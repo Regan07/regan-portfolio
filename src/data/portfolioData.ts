@@ -20,7 +20,7 @@ export const portfolioData = {
     github: "https://github.com/Regan07",
     linkedin: "https://www.linkedin.com/in/regan-anto",
     email: "regananto986@gmail.com",
-    twitter: "https://twitter.com/regananto", // Add your actual Twitter handle here
+    twitter: "", // Add your actual Twitter handle here
   },
 
   skills: {

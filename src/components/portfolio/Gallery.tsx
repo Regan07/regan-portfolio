@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Calendar, Image as ImageIcon, X, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { Calendar, Image as ImageIcon, X } from "lucide-react";
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<any>(null);
@@ -25,26 +25,13 @@ export const Gallery = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying, events.length]);
 
-  const goToNext = () => {
-    if (isTransitioning) return;
+  const goToSlide = (index: number) => {
+    if (isTransitioning || index === currentIndex) return;
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
+      setCurrentIndex(index);
       setTimeout(() => setIsTransitioning(false), 50);
     }, 350);
-  };
-
-  const goToPrevious = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + events.length) % events.length);
-      setTimeout(() => setIsTransitioning(false), 50);
-    }, 350);
-  };
-
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(!isAutoPlaying);
   };
 
   return (
@@ -162,36 +149,7 @@ export const Gallery = () => {
               </Card>
             </div>
 
-            {/* Navigation Buttons */}
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-bounce-subtle"
-              onClick={goToPrevious}
-            >
-              <ChevronLeft className="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-bounce-subtle"
-              onClick={goToNext}
-            >
-              <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </Button>
 
-            {/* Play/Pause Button */}
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute bottom-4 right-8 z-30 bg-white/90 hover:bg-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-pulse-slow"
-              onClick={toggleAutoPlay}
-            >
-              <div className="transition-transform duration-300 hover:rotate-12">
-                {isAutoPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-              </div>
-            </Button>
           </div>
         </div>
 
@@ -200,7 +158,7 @@ export const Gallery = () => {
           {events.map((event, index) => (
             <button
               key={event.id}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => goToSlide(index)}
               className={`w-12 h-9 rounded-md overflow-hidden border-2 transition-all duration-300 transform hover:scale-110 active:scale-95 ${
                 index === currentIndex 
                   ? 'border-primary scale-105 shadow-lg animate-pulse-subtle' 
