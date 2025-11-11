@@ -79,8 +79,8 @@ export const Projects = () => {
                       </a>
                     </Button>
                   )}
-
-                  <Button asChild size="sm" className="gap-2">
+                  
+                  {project.demo && (<Button asChild size="sm" className="gap-2">
                     <a
                       href={project.demo}
                       target="_blank"
@@ -89,7 +89,7 @@ export const Projects = () => {
                       <ExternalLink className="h-4 w-4" />
                       Live Demo
                     </a>
-                  </Button>
+                  </Button>)}
                 </div>
               </div>
             </Card>

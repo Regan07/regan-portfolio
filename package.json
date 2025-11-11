@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Regan07.github.io/regan-portfolio/",
+  "homepage": "https://regan07.github.io/regan-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

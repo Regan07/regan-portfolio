@@ -3,7 +3,7 @@ export const portfolioData = {
   title: "Full-Stack Developer",
   tagline: "Building seamless mobile and web experiences",
   bio: "Passionate full-stack developer with expertise in building scalable web and mobile applications. I specialize in creating elegant solutions to complex problems, with a focus on performance, user experience, and clean code architecture.",
-  resumeLink: "/resume.pdf",
+  resumeLink: "/ReganAnto_Resume.docx",
   
   hero: {
     typedSkills: [
@@ -20,6 +20,7 @@ export const portfolioData = {
     github: "https://github.com/Regan07",
     linkedin: "https://www.linkedin.com/in/regan-anto",
     email: "regananto986@gmail.com",
+    twitter: "https://twitter.com/regananto", // Add your actual Twitter handle here
   },
 
   skills: {
@@ -70,74 +71,74 @@ export const portfolioData = {
       ],
       website: "https://rentasst.com/",
       demo: "https://play.google.com/store/apps/details?id=com.processdrive.rentasst",
+    },
+    {
+      id: 1,
+      title: "Personal Portfolio Website",
+      description: "A personal portfolio website showcasing my projects and skills.",
+      image: "portfolio",
+      techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
+      tenure: "2025 - Present",
+      contributions: [
+        "Designed and developed the portfolio website using Next.js and Tailwind CSS",
+        "Implemented responsive design for optimal viewing on all devices",
+        "Deployed the website using github pages",
+      ],
+      website: "https://rentasst.com/",
     }
   ],
 
   experience: [
     {
       id: 1,
-      role: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      duration: "2021 - Present",
-      description: [
-        "Led development of microservices architecture serving 100K+ users",
-        "Reduced application load time by 40% through optimization",
-        "Mentored junior developers and conducted code reviews",
-      ],
-    },
-    {
-      id: 2,
       role: "Full-Stack Developer",
-      company: "Digital Solutions Co.",
-      duration: "2019 - 2021",
+      company: "Process Drive India pvt ltd",
+      duration: "2024 Feb - Present",
       description: [
-        "Built and deployed 15+ client projects using Laravel and React",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Collaborated with designers to create responsive interfaces",
+        "Im working as a Full-Stack Developer at Process Drive India Pvt Ltd since February 2024. My role involves developing and maintaining mobile application, collaborating with cross-functional teams to deliver high-quality software solutions.",
+        "Integrated Firebase notifications.",
+        "Implemented WhatsApp integration with customizable templates synced with WhatsApp Cloud.",
+        "Developed Invoice Module.",
+        "Built Couponing System.",
+        "Developed Transfer Order Module.",
       ],
-    },
-    {
-      id: 3,
-      role: "Mobile Developer",
-      company: "App Studio",
-      duration: "2017 - 2019",
-      description: [
-        "Developed cross-platform mobile apps with Flutter",
-        "Integrated third-party APIs and payment gateways",
-        "Published 8 apps to App Store and Play Store",
-      ],
-    },
+    }
   ],
 
   education: [
     {
       id: 1,
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      year: "2017",
-      description: "Graduated with honors, specialized in Software Engineering",
+      degree: "Master of Computer Applications",
+      institution: "Bharathidasan University - Thiruchirappalli",
+      year: "2023 - 2025 (Pursuing)",
+    },
+    {
+      id: 2,
+      degree: "B.sc, B.Ed Mathematics",
+      institution: "Pondicherry University",
+      year: "2019 - 2023",
     },
   ],
 
   certifications: [
     {
       id: 1,
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2022",
+      name: "AWS Certified Solutions Architect - In Progress",
+      issuer: "Udemy",
+      year: "2025",
     },
     {
       id: 2,
-      name: "Flutter Development Bootcamp",
+      name: "UI/UX Design",
       issuer: "Udemy",
-      year: "2021",
+      year: "2025",
     },
   ],
 
   stats: {
     yearsOfExperience: 1.5,
     projectsCompleted: 3,
-    techsKnown: 5,
+    techsKnown: 10,
   },
 };
 

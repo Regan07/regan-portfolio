@@ -80,16 +80,18 @@ export const Footer = () => {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a
-                  href={portfolioData.social.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Twitter
-                </a>
-              </li>
+              {portfolioData.social.twitter && (
+                <li>
+                  <a
+                    href={portfolioData.social.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Twitter
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

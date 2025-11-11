@@ -138,20 +138,22 @@ export const Contact = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full hover:bg-primary/10 hover:text-primary hover:border-primary"
-                >
-                  <a
-                    href={portfolioData.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                {portfolioData.social.twitter && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full hover:bg-primary/10 hover:text-primary hover:border-primary"
                   >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                </Button>
+                    <a
+                      href={portfolioData.social.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                  </Button>
+                )}
               </div>
             </Card>
 
