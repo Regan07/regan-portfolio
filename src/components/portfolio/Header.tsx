@@ -7,6 +7,21 @@ export const Header = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [scrolled, setScrolled] = useState(false);
 
+  // Initialize dark mode as default and handle persistence
+  useEffect(() => {
+    // Check if user has a saved preference, otherwise default to dark
+    const savedTheme = localStorage.getItem("portfolio-theme") as "light" | "dark" | null;
+    const initialTheme = savedTheme || "dark";
+    
+    setTheme(initialTheme);
+    
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
