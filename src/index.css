@@ -115,6 +115,213 @@ All colors MUST be HSL.
   .section-padding {
     @apply py-20 px-4 md:px-8 lg:px-16;
   }
+
+  /* Gallery animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+  }
+
+  /* Slide animations for gallery carousel */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+
+  .animate-slide-out-left {
+    animation: slideOutLeft 0.7s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+
+  .animate-slide-out-right {
+    animation: slideOutRight 0.7s ease-out forwards;
+  }
+
+  .animate-slide-in-center {
+    animation: slideInCenter 0.7s ease-out forwards;
+  }
+
+  .animate-slide-center {
+    animation: slideCenter 0.7s ease-out forwards;
+  }
+
+  .animate-slide-fade-in {
+    animation: slideFadeIn 0.7s ease-out forwards;
+  }
+
+  .animate-slide-fade-out {
+    animation: slideFadeOut 0.35s ease-out forwards;
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 0.35s ease-out forwards;
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Slide animation keyframes */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-25%) scale(0.75);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(-25%) scale(0.75);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-150%) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(25%) scale(0.75);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(25%) scale(0.75);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(150%) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInCenter {
+  0% {
+    transform: translateX(0) scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideCenter {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0) scale(0.95);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 @layer base {

@@ -77,6 +77,12 @@ export const Header = () => {
             Awards
           </button>
           <button
+            onClick={() => scrollToSection("gallery")}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Gallery
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >

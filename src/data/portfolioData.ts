@@ -150,6 +150,59 @@ export const portfolioData = {
     },
   ],
 
+  gallery: {
+    events: [
+      {
+        id: 1,
+        title: "Tech Conference 2024",
+        date: "Dec 2024",
+        description: "Speaking at the annual developer conference",
+        image: "/gallery/tech-conference.jpg",
+        category: "Speaking"
+      },
+      {
+        id: 2,
+        title: "Team Building Event",
+        date: "Nov 2024",
+        description: "Company team building and networking event",
+        image: "/gallery/team-building.jpg",
+        category: "Team"
+      },
+      {
+        id: 3,
+        title: "Project Launch",
+        date: "Oct 2024",
+        description: "Successful launch of RentAsst platform",
+        image: "/gallery/project-launch.jpg",
+        category: "Achievement"
+      },
+      {
+        id: 4,
+        title: "Hackathon Win",
+        date: "Sep 2024",
+        description: "First place at local hackathon competition",
+        image: "/gallery/hackathon.jpg",
+        category: "Competition"
+      },
+      {
+        id: 5,
+        title: "Workshop Facilitation",
+        date: "Aug 2024",
+        description: "Conducting Flutter development workshop",
+        image: "/gallery/workshop.jpg",
+        category: "Teaching"
+      },
+      {
+        id: 6,
+        title: "Award Ceremony",
+        date: "Apr 2024",
+        description: "Receiving Rising Star award",
+        image: "/gallery/award-ceremony.jpg",
+        category: "Recognition"
+      }
+    ]
+  },
+
   stats: {
     yearsOfExperience: 1.5,
     projectsCompleted: 3,
