@@ -34,7 +34,16 @@ export const Header = () => {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    document.documentElement.classList.toggle("dark");
+    
+    // Save preference to localStorage
+    localStorage.setItem("portfolio-theme", newTheme);
+    
+    // Toggle dark class
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   };
 
   const scrollToSection = (id: string) => {
