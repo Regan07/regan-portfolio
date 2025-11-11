@@ -135,6 +135,21 @@ export const portfolioData = {
     },
   ],
 
+  awards: [
+    {
+      id: 1,
+      name: "Rising Star",
+      date: "Apr 2025",
+      description: "Recognized for exceptional performance and innovation in early career development",
+    },
+    {
+      id: 2,
+      name: "Best Performer of the Month",
+      date: "Oct 2025",
+      description: "Awarded for outstanding contribution and excellence in monthly performance metrics",
+    },
+  ],
+
   stats: {
     yearsOfExperience: 1.5,
     projectsCompleted: 3,

@@ -71,6 +71,12 @@ export const Header = () => {
             Experience
           </button>
           <button
+            onClick={() => scrollToSection("awards")}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Awards
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
