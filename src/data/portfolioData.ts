@@ -59,7 +59,7 @@ export const portfolioData = {
       id: 1,
       title: "RentAsst (Rental Assistance Platform)",
       description: "Full-featured rental assistance platform with real-time inventory management and payment integration.",
-      image: "ecommerce",
+      image: "",
       techStack: ["Laravel", "Flutter", "MySql", "FireBase"],
       tenure: "2024 - Present",
       contributions: [
