@@ -1,73 +1,190 @@
-# Welcome to your Lovable project
+# Regan Anto - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a Full-Stack Developer.
 
-**URL**: https://lovable.dev/projects/44f9d372-f377-4ab9-86db-2e02e0f8669c
+## 🚀 Live Demo
 
-## How can I edit this code?
+**Production**: [https://regan07.github.io/regan-portfolio/](https://regan07.github.io/regan-portfolio/)
 
-There are several ways of editing your application.
+## 👨‍💻 About This Portfolio
 
-**Use Lovable**
+This portfolio website represents my journey as a Full-Stack Developer, featuring:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/44f9d372-f377-4ab9-86db-2e02e0f8669c) and start prompting.
+- **Modern Design**: Clean, professional interface with dark/light theme toggle
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Interactive Elements**: Smooth animations and transitions
+- **Dynamic Content**: Real-time contact form with EmailJS integration
+- **Performance Focused**: Fast loading with optimized assets
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Technologies Used
 
-**Use your preferred IDE**
+### Frontend
+- **React 18** - Modern component-based architecture
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality UI components
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Features & Integrations
+- **EmailJS** - Contact form email delivery
+- **Lucide Icons** - Beautiful, customizable icons
+- **Smooth Scrolling** - Enhanced navigation experience
+- **Theme Toggle** - Dark/Light mode support
+- **Responsive Design** - Mobile-first approach
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Development & Deployment
+- **GitHub Pages** - Hosting and deployment
+- **GitHub Actions** - Automated deployment pipeline
+- **ESLint & TypeScript** - Code quality and type safety
 
-Follow these steps:
+## 🏗️ Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```
+src/
+├── components/
+│   ├── portfolio/          # Main portfolio sections
+│   │   ├── Header.tsx      # Navigation and theme toggle
+│   │   ├── Hero.tsx        # Landing section
+│   │   ├── About.tsx       # Personal information
+│   │   ├── Skills.tsx      # Technical skills
+│   │   ├── Projects.tsx    # Featured projects
+│   │   ├── Experience.tsx  # Work experience
+│   │   ├── Awards.tsx      # Achievements
+│   │   ├── Contact.tsx     # Contact form
+│   │   └── Footer.tsx      # Footer section
+│   └── ui/                 # Reusable UI components
+├── data/
+│   └── portfolioData.ts    # Portfolio content and data
+├── lib/
+│   ├── assetUtils.ts       # Asset path utilities
+│   └── utils.ts            # General utilities
+└── pages/
+    ├── Index.tsx           # Main portfolio page
+    └── NotFound.tsx        # 404 page
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Regan07/regan-portfolio.git
+cd regan-portfolio
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Start development server**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. **Open in browser**
+Navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📧 Contact Form Setup
 
-**Use GitHub Codespaces**
+The contact form uses EmailJS for email delivery. To set it up:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Create EmailJS Account**
+   - Sign up at [EmailJS.com](https://emailjs.com)
+   - Create an email service
+   - Create an email template
 
-## What technologies are used for this project?
+2. **Configure Environment Variables**
+   ```bash
+   # Create .env.local file
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id  
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
-This project is built with:
+3. **Update Configuration**
+   - Replace placeholder values in `src/components/portfolio/Contact.tsx`
+   - Customize email template variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚢 Deployment
 
-## How can I deploy this project?
+### GitHub Pages (Current Setup)
 
-Simply open [Lovable](https://lovable.dev/projects/44f9d372-f377-4ab9-86db-2e02e0f8669c) and click on Share -> Publish.
+1. **Build for production**
+```bash
+npm run build
+```
 
-## Can I connect a custom domain to my Lovable project?
+2. **Deploy to GitHub Pages**
+```bash
+npm run deploy
+```
 
-Yes, you can!
+The site is automatically deployed to GitHub Pages with the base path `/regan-portfolio/`.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Alternative Deployment Options
+- **Vercel**: Connect GitHub repo for automatic deployments
+- **Netlify**: Drag and drop the `dist` folder
+- **Custom Server**: Upload `dist` folder contents
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🎨 Customization
+
+### Portfolio Data
+Update `src/data/portfolioData.ts` to customize:
+- Personal information
+- Skills and technologies
+- Project details
+- Work experience
+- Contact information
+
+### Styling
+- **Colors**: Modify CSS variables in `src/index.css`
+- **Components**: Update component styles in respective files
+- **Theme**: Customize dark/light theme colors
+
+### Assets
+- **Resume**: Replace `public/ReganAnto_Resume.docx`
+- **Images**: Add project images to `public/gallery/`
+- **Favicon**: Replace `public/favicon.ico`
+
+## 📱 Features Showcase
+
+- ✅ **Responsive Design** - Works on all devices
+- ✅ **Dark/Light Theme** - User preference toggle
+- ✅ **Smooth Animations** - Enhanced user experience
+- ✅ **Contact Form** - Direct email integration
+- ✅ **Project Gallery** - Showcase with details
+- ✅ **Skills Matrix** - Organized by categories
+- ✅ **Work Timeline** - Professional experience
+- ✅ **Awards Section** - Recognition and achievements
+- ✅ **Social Links** - Professional networking
+- ✅ **Resume Download** - Direct PDF/DOCX download
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and feedback are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+**Regan Anto**
+- **Email**: regananto986@gmail.com
+- **LinkedIn**: [linkedin.com/in/regan-anto](https://www.linkedin.com/in/regan-anto)
+- **GitHub**: [github.com/Regan07](https://github.com/Regan07)
+
+---
+
+⭐ **Star this repository if you found it helpful!**
