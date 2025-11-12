@@ -1,9 +1,11 @@
+import { getAssetPath, getGalleryImagePath, getResumePath } from "@/lib/assetUtils";
+
 export const portfolioData = {
   name: "Regan",
   title: "Full-Stack Developer",
   tagline: "Building seamless mobile and web experiences",
   bio: "Passionate full-stack developer with expertise in building scalable web and mobile applications. I specialize in creating elegant solutions to complex problems, with a focus on performance, user experience, and clean code architecture.",
-  resumeLink: "/ReganAnto_Resume.docx",
+  resumeLink: getResumePath(),
   
   hero: {
     typedSkills: [
@@ -157,7 +159,7 @@ export const portfolioData = {
         title: "Tech Conference 2024",
         date: "Dec 2024",
         description: "Speaking at the annual developer conference",
-        image: "/gallery/tech-conference.jpg",
+        image: getGalleryImagePath("tech-conference.jpg"),
         category: "Speaking"
       },
       {
@@ -165,7 +167,7 @@ export const portfolioData = {
         title: "Team Building Event",
         date: "Nov 2024",
         description: "Company team building and networking event",
-        image: "/gallery/team-building.jpg",
+        image: getGalleryImagePath("team-building.jpg"),
         category: "Team"
       },
       {
@@ -173,7 +175,7 @@ export const portfolioData = {
         title: "Project Launch",
         date: "Oct 2024",
         description: "Successful launch of RentAsst platform",
-        image: "/gallery/project-launch.jpg",
+        image: getGalleryImagePath("project-launch.jpg"),
         category: "Achievement"
       },
       {
@@ -181,7 +183,7 @@ export const portfolioData = {
         title: "Hackathon Win",
         date: "Sep 2024",
         description: "First place at local hackathon competition",
-        image: "/gallery/hackathon.jpg",
+        image: getGalleryImagePath("hackathon.jpg"),
         category: "Competition"
       },
       {
@@ -189,7 +191,7 @@ export const portfolioData = {
         title: "Workshop Facilitation",
         date: "Aug 2024",
         description: "Conducting Flutter development workshop",
-        image: "/gallery/workshop.jpg",
+        image: getGalleryImagePath("workshop.jpg"),
         category: "Teaching"
       },
       {
@@ -197,7 +199,7 @@ export const portfolioData = {
         title: "Award Ceremony",
         date: "Apr 2024",
         description: "Receiving Rising Star award",
-        image: "/gallery/award-ceremony.jpg",
+        image: getGalleryImagePath("award-ceremony.jpg"),
         category: "Recognition"
       }
     ]
