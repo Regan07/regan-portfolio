@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
+import { downloadResume } from "@/lib/assetUtils";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -74,15 +75,13 @@ export const Hero = () => {
               Contact Me
             </Button>
             <Button
-              asChild
               variant="outline"
               size="lg"
               className="gap-2 group border-primary/50 hover:bg-primary/10"
+              onClick={downloadResume}
             >
-              <a href={portfolioData.resumeLink} download>
-                <Download className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                Download Resume
-              </a>
+              <Download className="h-4 w-4 group-hover:scale-110 transition-transform" />
+              Download Resume
             </Button>
           </div>
 

@@ -2,6 +2,7 @@ import { Moon, Sun, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { portfolioData } from "@/data/portfolioData";
+import { downloadResume } from "@/lib/assetUtils";
 
 export const Header = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -128,11 +129,9 @@ export const Header = () => {
             )}
           </Button>
 
-          <Button asChild size="sm" className="gap-2">
-            <a href={portfolioData.resumeLink} download>
-              <Download className="h-4 w-4" />
-              Resume
-            </a>
+          <Button size="sm" className="gap-2" onClick={downloadResume}>
+            <Download className="h-4 w-4" />
+            Resume
           </Button>
         </div>
       </nav>

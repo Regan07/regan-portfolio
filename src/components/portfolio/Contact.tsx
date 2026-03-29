@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { downloadResume } from "@/lib/assetUtils";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -163,10 +164,8 @@ export const Contact = () => {
                 I'm currently open to freelance projects and full-time opportunities.
                 Let's build something amazing together!
               </p>
-              <Button asChild variant="outline" className="w-full">
-                <a href={portfolioData.resumeLink} download>
-                  Download Resume
-                </a>
+              <Button variant="outline" className="w-full" onClick={downloadResume}>
+                Download Resume
               </Button>
             </Card>
           </div>
