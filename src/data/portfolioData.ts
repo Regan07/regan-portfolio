@@ -56,6 +56,63 @@ export const portfolioData = {
     ],
   },
 
+  highlightWorks: {
+    backend: [
+      {
+        title: "Push Notification Integration",
+        description: "Integrated Firebase push notifications to deliver real-time updates and alerts.",
+        icon: "Bell",
+      },
+      {
+        title: "WhatsApp Cloud Integration",
+        description: "Implemented WhatsApp integration using WhatsApp Cloud, with support for customizable and reusable message templates.",
+        icon: "MessageCircle",
+      },
+      {
+        title: "Invoice Management Module",
+        description: "Designed and developed a complete Invoice module, covering generation, validation, and lifecycle management.",
+        icon: "FileText",
+      },
+      {
+        title: "Couponing & Discount System",
+        description: "Built a flexible Couponing system to handle discounts, offers, and promotional rules.",
+        icon: "Tag",
+      },
+      {
+        title: "RazorPay Integration",
+        description: "Implemented Razorpay for secure payment processing with backend validation, webhook handling, and real-time transaction status updates.",
+        icon: "CreditCard",
+      },
+      {
+        title: "Transfer Order Management",
+        description: "Developed a Transfer Order module to manage and track item movements between locations.",
+        icon: "ArrowRightLeft",
+      },
+    ],
+    frontend: [
+      {
+        title: "Invoice Management Module",
+        description: "Built the complete Invoice UI with dynamic form generation, PDF preview, validation feedback, and lifecycle status tracking across the app.",
+        icon: "FileText",
+      },
+      {
+        title: "Couponing & Discount System",
+        description: "Developed the frontend for coupon creation, discount rule configuration, and real-time promotional offer management with intuitive UX.",
+        icon: "Tag",
+      },
+      {
+        title: "RazorPay Integration",
+        description: "Implemented the client-side Razorpay checkout flow with seamless payment UI, transaction status handling, and error recovery screens.",
+        icon: "CreditCard",
+      },
+      {
+        title: "Automation & Quality Assurance",
+        description: "Automated major application modules using Patrol testing, ensuring stability, reliability, and regression coverage across key workflows.",
+        icon: "ShieldCheck",
+      },
+    ],
+  },
+
   projects: [
     {
       id: 1,

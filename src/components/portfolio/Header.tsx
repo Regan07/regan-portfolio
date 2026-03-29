@@ -90,6 +90,12 @@ export const Header = () => {
             Projects
           </button>
           <button
+            onClick={() => scrollToSection("highlight-works")}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Highlights
+          </button>
+          <button
             onClick={() => scrollToSection("experience")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
