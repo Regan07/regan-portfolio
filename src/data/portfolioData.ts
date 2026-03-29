@@ -75,7 +75,20 @@ export const portfolioData = {
       demo: "https://play.google.com/store/apps/details?id=com.processdrive.rentasst",
     },
     {
-      id: 1,
+      id: 2,
+      title: "Eyarkai OIL",
+      description: "Oil production management application for real-time production monitoring.",
+      image: "",
+      techStack: ["Flutter", "MySql", "FireBase"],
+      tenure: "Feb 2024 - July 2024",
+      contributions: [
+        "Built cross-platform mobile app with Flutter for production monitoring",
+        "Implemented UI for production batch tracking system",
+        "Set up Firebase for push notifications"
+      ],
+    },
+    {
+      id: 3,
       title: "Personal Portfolio Website",
       description: "A personal portfolio website showcasing my projects and skills.",
       image: "portfolio",
@@ -206,9 +219,9 @@ export const portfolioData = {
   },
 
   stats: {
-    yearsOfExperience: 1.5,
+    yearsOfExperience: 2,
     projectsCompleted: 3,
-    techsKnown: 10,
+    techsKnown: 15,
   },
 };
 
