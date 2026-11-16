@@ -1,9 +1,10 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import * as Icons from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export const Skills = () => {
+  const portfolioData = usePortfolio();
   const categories = [
     { title: "Frontend", skills: portfolioData.skills.frontend, color: "from-blue-500 to-cyan-500" },
     { title: "Backend", skills: portfolioData.skills.backend, color: "from-green-500 to-emerald-500" },

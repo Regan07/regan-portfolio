@@ -28,21 +28,24 @@ export const getGalleryImagePath = (imageName: string): string => {
   return getAssetPath(`gallery/${imageName}`);
 };
 
-/**
- * Get resume download path with correct base URL
- * @returns The resume file path
- */
-export const getResumePath = (): string => {
-  return getAssetPath('ReganAnto_Resume.pdf');
-};
+
+export interface ResumeFile {
+  /** File name inside /public */
+  file: string;
+  /** Name given to the downloaded file */
+  filename: string;
+}
 
 /**
  * Programmatically trigger a resume download using fetch + blob.
  * Falls back to window.open if fetch fails.
  */
-export const downloadResume = async (e?: React.MouseEvent): Promise<void> => {
+export const downloadResume = async (
+  e: { preventDefault: () => void } | undefined,
+  resume: ResumeFile,
+): Promise<void> => {
   if (e) e.preventDefault();
-  const url = getResumePath();
+  const url = getAssetPath(resume.file);
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('fetch failed');
@@ -50,7 +53,7 @@ export const downloadResume = async (e?: React.MouseEvent): Promise<void> => {
     const blobUrl = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = blobUrl;
-    a.download = 'ReganAnto_Resume.pdf';
+    a.download = resume.filename;
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();

@@ -1,4 +1,4 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { downloadResume } from "@/lib/assetUtils";
 
 export const Contact = () => {
+  const portfolioData = usePortfolio();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -164,7 +165,7 @@ export const Contact = () => {
                 I'm currently open to freelance projects and full-time opportunities.
                 Let's build something amazing together!
               </p>
-              <Button variant="outline" className="w-full" onClick={downloadResume}>
+              <Button variant="outline" className="w-full" onClick={(e) => downloadResume(e, portfolioData.resume)}>
                 Download Resume
               </Button>
             </Card>

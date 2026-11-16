@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react";
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { downloadResume } from "@/lib/assetUtils";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const portfolioData = usePortfolio();
   const [typedText, setTypedText] = useState("");
   const [skillIndex, setSkillIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -78,7 +79,7 @@ export const Hero = () => {
               variant="outline"
               size="lg"
               className="gap-2 group border-primary/50 hover:bg-primary/10"
-              onClick={downloadResume}
+              onClick={(e) => downloadResume(e, portfolioData.resume)}
             >
               <Download className="h-4 w-4 group-hover:scale-110 transition-transform" />
               Download Resume

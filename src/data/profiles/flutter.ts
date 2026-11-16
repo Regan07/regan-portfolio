@@ -1,11 +1,11 @@
-import { getAssetPath, getGalleryImagePath, getResumePath } from "@/lib/assetUtils";
+import { getGalleryImagePath } from "@/lib/assetUtils";
 
-export const portfolioData = {
+export const flutterData = {
   name: "Regan",
   title: "Full-Stack Developer",
   tagline: "Building seamless mobile and web experiences",
   bio: "Passionate full-stack developer with expertise in building scalable web and mobile applications. I specialize in creating elegant solutions to complex problems, with a focus on performance, user experience, and clean code architecture.",
-  resumeLink: getResumePath(),
+  resume: { file: "ReganAnto_Resume.pdf", filename: "ReganAnto_Flutter_Resume.pdf" },
   
   hero: {
     typedSkills: [
@@ -282,4 +282,4 @@ export const portfolioData = {
   },
 };
 
-export type PortfolioData = typeof portfolioData;
+export type PortfolioData = typeof flutterData;

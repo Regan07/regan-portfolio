@@ -1,9 +1,10 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Trophy } from "lucide-react";
 
 export const Awards = () => {
+  const portfolioData = usePortfolio();
   return (
     <section id="awards" className="section-padding">
       <div className="container mx-auto max-w-6xl">

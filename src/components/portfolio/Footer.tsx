@@ -1,7 +1,8 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Heart } from "lucide-react";
 
 export const Footer = () => {
+  const portfolioData = usePortfolio();
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };

@@ -1,9 +1,10 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import * as Icons from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export const HighlightWorks = () => {
+  const portfolioData = usePortfolio();
   const sections = [
     {
       title: "Backend",

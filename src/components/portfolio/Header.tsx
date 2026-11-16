@@ -1,10 +1,11 @@
 import { Moon, Sun, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { downloadResume } from "@/lib/assetUtils";
 
 export const Header = () => {
+  const portfolioData = usePortfolio();
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [scrolled, setScrolled] = useState(false);
 
@@ -135,7 +136,7 @@ export const Header = () => {
             )}
           </Button>
 
-          <Button size="sm" className="gap-2" onClick={downloadResume}>
+          <Button size="sm" className="gap-2" onClick={(e) => downloadResume(e, portfolioData.resume)}>
             <Download className="h-4 w-4" />
             Resume
           </Button>

@@ -1,10 +1,11 @@
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, GlobeIcon } from "lucide-react";
 
 export const Projects = () => {
+  const portfolioData = usePortfolio();
   return (
     <section id="projects" className="section-padding bg-muted/30">
       <div className="container mx-auto max-w-6xl">

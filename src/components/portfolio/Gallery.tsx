@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { portfolioData } from "@/data/portfolioData";
+import { usePortfolio } from "@/context/ProfileContext";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Calendar, Image as ImageIcon, X } from "lucide-react";
 
 export const Gallery = () => {
+  const portfolioData = usePortfolio();
   const [selectedImage, setSelectedImage] = useState<any>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
